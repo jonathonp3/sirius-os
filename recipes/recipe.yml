@@ -21,7 +21,7 @@ modules:
   
   - from-file: ../modules/packages.yml
 
-  - from-file: ../modules/default-flatpaks.yml
+  # from-file: ../modules/default-flatpaks.yml
 
   - from-file: ../modules/systemd.yml
   
