@@ -17,19 +17,19 @@ modules:
       - source: system
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
-  - from-file: ../modules/repository.yml
+  # from-file: ../modules/repository.yml
   
-  - from-file: ../modules/packages.yml
+  # from-file: ../modules/packages.yml
 
   # from-file: ../modules/default-flatpaks.yml
 
-  - from-file: ../modules/systemd.yml
+  # from-file: ../modules/systemd.yml
   
-  - from-file: ../modules/gnome-extensions.yml
+  # from-file: ../modules/gnome-extensions.yml
   
-  - from-file: ../modules/script.yml
+  # from-file: ../modules/script.yml
 
-  - from-file: ../modules/fonts.yml 
+  # from-file: ../modules/fonts.yml 
 
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
