@@ -63,7 +63,7 @@ podman run --pull always --rm ghcr.io/blue-build/cli:latest-installer | bash
 
 2. Generate the ISO from the repository image:
 ```bash
-sudo bluebuild generate-iso --iso-name zeta-os iso image ghcr.io/jonathonp3/zeta-os:latest
+sudo bluebuild generate-iso --iso-name zeta-os.iso image ghcr.io/jonathonp3/zeta-os:latest
 ```
 
 
