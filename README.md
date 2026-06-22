@@ -18,9 +18,6 @@ These instructions are for my family only. The image is designed to be read-only
 If you want to try my PIA integration on Silverblue, see:
 https://github.com/jonathonp3/wolf-os
 
-The PIA GUI is configured to run with UID/GID **1000** (the default group for a new Fedora installation).
-
-
 The first step is to rebase from Fedora Silverblue:
 
 1. Rebase to the unsigned image:
