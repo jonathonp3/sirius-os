@@ -3,28 +3,54 @@ set -euo pipefail
 
 echo "🚀 Starting Zeta-OS Master Assembly..."
 
-# --- 1. IDENTITY (Immediate & Declarative) ---
-# 1. Create the groups physically in the build environment 
-# so 'chown' commands below don't fail.
+# --- 1. PRE-INSTALL IDENTITY ---
+# Create groups physically in the build factory so RPMs don't struggle
 groupadd -r piavpn || true
 groupadd -r piahnsd || true
+groupadd -r docker || true
 
-# ---- 2. Bake the blueprints in for the family pcs ---
+# Bake the blueprints for the kids' gaming pcs
 mkdir -p /usr/lib/sysusers.d
 cat <<EOF > /usr/lib/sysusers.d/zeta-os.conf
 g piavpn - -
 g piahnsd - -
+g docker - -
+# Add everyone to Docker and libvirt
 m jonathon libvirt
 m jonathon piavpn
+m jonathon docker
 m kyle libvirt
 m kyle piavpn
+m kyle docker
 m james libvirt
 m james piavpn
+m james docker
 m lucas libvirt
 m lucas piavpn
+m lucas docker
 m nicholas libvirt
 m nicholas piavpn
+m nicholas docker
 EOF
+
+# --- 2. WINBOAT AUTO-UPDATE (Fail-Safe Version) ---
+echo "🚢 Attempting to find the latest Winboat release..."
+
+# Use a subshell and '|| true' to ensure the variable assignment prevents the script from crashing
+WINBOAT_URL=$(curl -s https://api.github.com/repos/TibixDev/winboat/releases/latest | \
+              grep "browser_download_url.*x86_64.rpm" | \
+              cut -d '"' -f 4 || echo "")
+
+if [ -n "$WINBOAT_URL" ]; then
+    echo "✅ Found Winboat: $WINBOAT_URL"
+    echo "📦 Attempting to install Winboat RPM..."
+    
+    # Use '|| echo ...' so if the download or install fails, the build carries on
+    dnf install -y "$WINBOAT_URL" || echo "⚠️ Warning: Winboat installation failed, but continuing build."
+else
+    echo "⚠️ Warning: Could not find Winboat download URL. Winboat will not be included in this build."
+fi
+
 
 # --- 3. MASTER WIRING BLUEPRINT ---
 mkdir -p /usr/lib/tmpfiles.d
@@ -58,7 +84,7 @@ cp /usr/libexec/piavpn/usr/share/pixmaps/piavpn.png /usr/share/pixmaps/piavpn.pn
 sed -i 's|ExecStart=.*|ExecStart=/opt/piavpn/bin/pia-daemon|' /usr/lib/systemd/system/piavpn.service
 sed -i '/\[Service\]/a WorkingDirectory=/opt/piavpn' /usr/lib/systemd/system/piavpn.service
 
-# --- 6. PERMISSIONS ---
+# --- 6. PERMISSIONS and FINALIZE ------
 setcap 'cap_net_bind_service=+ep' /usr/libexec/piavpn/opt/piavpn/bin/pia-unbound || true
 
 # These will work now because we ran 'groupadd' in Step 1
@@ -67,26 +93,7 @@ chown root:piavpn /usr/libexec/piavpn/opt/piavpn/bin/piactl
 chmod 755 /usr/libexec/piavpn/opt/piavpn/bin/pia-client
 chmod 755 /usr/libexec/piavpn/opt/piavpn/bin/piactl
 
-# --- 7. WINBOAT AUTO-UPDATE (Fail-Safe Version) ---
-echo "🚢 Attempting to find the latest Winboat release..."
-
-# Use a subshell and '|| true' to ensure the variable assignment prevents the script from crashing
-WINBOAT_URL=$(curl -s https://api.github.com/repos/TibixDev/winboat/releases/latest | \
-              grep "browser_download_url.*x86_64.rpm" | \
-              cut -d '"' -f 4 || echo "")
-
-if [ -n "$WINBOAT_URL" ]; then
-    echo "✅ Found Winboat: $WINBOAT_URL"
-    echo "📦 Attempting to install Winboat RPM..."
-    
-    # Use '|| echo ...' so if the download or install fails, the build carries on
-    dnf install -y "$WINBOAT_URL" || echo "⚠️ Warning: Winboat installation failed, but continuing build."
-else
-    echo "⚠️ Warning: Could not find Winboat download URL. Winboat will not be included in this build."
-fi
-
-# ---- 8. FINALIZE ---
-systemctl enable virtlogd.service piavpn.service
+systemctl enable virtlogd.service piavpn.service docker.service
 
 echo "✅ Zeta-OS Custom Assembly Complete!"
 

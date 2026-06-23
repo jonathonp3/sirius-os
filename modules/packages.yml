@@ -39,4 +39,8 @@ install:
   - xorg-x11-fonts-misc
   - libxkbcommon-x11
   - wget2
+  
+  # Winboat
+  - freerdp
+  - libwinpr
 
