@@ -15,7 +15,9 @@ modules:
       - source: usr
         destination: /usr
       - source: tmp/pia-backup.tar.xz
-        destination: /tmp/pia-backup.tar.xz        
+        destination: /tmp/pia-backup.tar.xz
+      - source: usr/share/gtksourceview-5/styles
+        destination: /usr/share/gtksourceview-5/styles
 
   # MISSION 2: Modular Repos and Packages
   - from-file: ../modules/repository.yml

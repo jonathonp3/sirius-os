@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<style-scheme id="ant-clean-light" _name="Ant (Clean Light)" version="1.0">
+  <author>Eliver Lara / Jonathon</author>
+  <_description>Clean, milky light theme inspired by Ant GTK</_description>
+
+  <!-- Ant Palette -->
+  <color name="ant-bg"      value="#fdfdfd"/> <!-- Milky White Background -->
+  <color name="ant-fg"      value="#383a42"/> <!-- Soft Charcoal Text -->
+  <color name="ant-gray"    value="#a0a1a7"/> <!-- Muted UI/Comments -->
+  <color name="ant-accent"  value="#ff6a6a"/> <!-- Signature Ant Pink/Red -->
+  <color name="ant-blue"    value="#4081ec"/>
+  <color name="ant-purple"  value="#a626a4"/>
+  <color name="ant-green"   value="#50a14f"/>
+  <color name="ant-orange"  value="#da8548"/>
+  <color name="ant-yellow"  value="#c18401"/>
+
+  <!-- Global Settings -->
+  <style name="text"                        foreground="ant-fg" background="ant-bg"/>
+  <style name="selection"                   background="#e5e5e6"/>
+  <style name="cursor"                      foreground="ant-accent"/>
+  <style name="current-line"                background="#f2f2f2"/>
+  <style name="line-numbers"                foreground="ant-gray" background="#f7f7f7"/>
+  <style name="draw-spaces"                 foreground="#d1d1d1"/>
+
+  <!-- Syntax Highlighting -->
+  <style name="def:comment"                 foreground="ant-gray" italic="true"/>
+  <style name="def:constant"                foreground="ant-orange"/>
+  <style name="def:identifier"              foreground="ant-blue"/>
+  <style name="def:statement"               foreground="ant-purple" bold="true"/>
+  <style name="def:type"                    foreground="ant-yellow"/>
+  <style name="def:operator"                foreground="ant-fg"/>
+  <style name="def:preprocessor"            foreground="ant-accent"/>
+  <style name="def:error"                   foreground="ant-accent" bold="true" underline="single"/>
+  <style name="def:note"                    foreground="ant-green" bold="true"/>
+
+  <!-- Markup -->
+  <style name="def:link-text"               foreground="ant-blue" underline="single"/>
+  <style name="def:heading"                 foreground="ant-accent" bold="true"/>
+</style-scheme>
+

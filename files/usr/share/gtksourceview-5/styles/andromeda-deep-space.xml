@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<style-scheme id="andromeda-deep-space" _name="Andromeda (Deep Space)" version="1.0">
+  <author>Eliver Lara / Jonathon</author>
+  <_description>Futuristic deep space theme inspired by Andromeda</_description>
+
+  <!-- Andromeda Palette -->
+  <color name="andromeda-bg"      value="#23262e"/> <!-- Deep Charcoal/Blue -->
+  <color name="andromeda-fg"      value="#d5ced9"/> <!-- Muted Lavender White -->
+  <color name="andromeda-line"    value="#2b303b"/> <!-- Subtle Current Line -->
+  <color name="andromeda-sel"     value="#323641"/> <!-- Selection -->
+  
+  <color name="andromeda-pink"    value="#c74ded"/> <!-- Main Accent -->
+  <color name="andromeda-orange"  value="#f39c12"/> <!-- Keywords -->
+  <color name="andromeda-yellow"  value="#ffe66d"/> <!-- Types -->
+  <color name="andromeda-green"   value="#96e072"/> <!-- Constants -->
+  <color name="andromeda-cyan"    value="#00e8c6"/> <!-- Identifiers -->
+  <color name="andromeda-blue"    value="#6d7df2"/> <!-- Functions -->
+  <color name="andromeda-gray"    value="#747c92"/> <!-- Comments -->
+  <color name="andromeda-red"     value="#ee5d5d"/> <!-- Errors -->
+
+  <!-- Global Settings -->
+  <style name="text"                        foreground="andromeda-fg" background="andromeda-bg"/>
+  <style name="selection"                   background="andromeda-sel"/>
+  <style name="cursor"                      foreground="andromeda-cyan"/>
+  <style name="current-line"                background="andromeda-line"/>
+  <style name="line-numbers"                foreground="andromeda-gray" background="andromeda-bg"/>
+  <style name="draw-spaces"                 foreground="#3e4451"/>
+
+  <!-- Syntax Highlighting -->
+  <style name="def:comment"                 foreground="andromeda-gray" italic="true"/>
+  <style name="def:constant"                foreground="andromeda-green"/>
+  <style name="def:special-char"            foreground="andromeda-pink"/>
+  <style name="def:identifier"              foreground="andromeda-cyan"/>
+  <style name="def:function"                foreground="andromeda-blue"/>
+  <style name="def:statement"               foreground="andromeda-orange" bold="true"/>
+  <style name="def:keyword"                 foreground="andromeda-pink"/>
+  <style name="def:type"                    foreground="andromeda-yellow"/>
+  <style name="def:operator"                foreground="andromeda-cyan"/>
+  <style name="def:preprocessor"            foreground="andromeda-purple"/>
+  <style name="def:error"                   foreground="andromeda-red" bold="true" underline="single"/>
+  <style name="def:note"                    foreground="andromeda-green" bold="true"/>
+
+  <!-- Markup -->
+  <style name="def:link-text"               foreground="andromeda-blue" underline="single"/>
+  <style name="def:heading"                 foreground="andromeda-pink" bold="true"/>
+</style-scheme>
+

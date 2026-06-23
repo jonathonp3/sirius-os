@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<style-scheme id="sweet-neon-synthwave" _name="Sweet (Neon Synthwave)" version="1.0">
+  <author>Eliver Lara / Jonathon</author>
+  <_description>Vibrant neon palette inspired by the Sweet GTK theme</_description>
+
+  <!-- Sweet Palette -->
+  <color name="sweet-bg"      value="#1b1e2b"/> <!-- Deep Dark Indigo -->
+  <color name="sweet-fg"      value="#fcfcfa"/> <!-- White -->
+  <color name="sweet-gray"    value="#454b68"/> <!-- Muted UI -->
+  <color name="sweet-pink"    value="#ed254e"/> <!-- Intense Pink -->
+  <color name="sweet-purple"  value="#c76dd3"/> <!-- Soft Purple -->
+  <color name="sweet-blue"    value="#2193b0"/> <!-- Cyan/Blue Gradient Start -->
+  <color name="sweet-cyan"    value="#73fffe"/> <!-- Bright Cyan -->
+  <color name="sweet-green"   value="#00f260"/> <!-- Neon Green -->
+  <color name="sweet-orange"  value="#f79d00"/> <!-- Vibrant Orange -->
+  <color name="sweet-yellow"  value="#ffe53b"/> <!-- Electric Yellow -->
+
+  <!-- Global Settings -->
+  <style name="text"                        foreground="sweet-fg" background="sweet-bg"/>
+  <style name="selection"                   background="sweet-gray"/>
+  <style name="cursor"                      foreground="sweet-cyan"/>
+  <style name="current-line"                background="#242938"/>
+  <style name="line-numbers"                foreground="sweet-gray" background="sweet-bg"/>
+  <style name="draw-spaces"                 foreground="sweet-gray"/>
+
+  <!-- Syntax Highlighting -->
+  <style name="def:comment"                 foreground="sweet-gray" italic="true"/>
+  <style name="def:constant"                foreground="sweet-purple"/>
+  <style name="def:identifier"              foreground="sweet-cyan"/>
+  <style name="def:statement"               foreground="sweet-pink" bold="true"/>
+  <style name="def:type"                    foreground="sweet-yellow"/>
+  <style name="def:operator"                foreground="sweet-purple"/>
+  <style name="def:preprocessor"            foreground="sweet-orange"/>
+  <style name="def:error"                   foreground="sweet-pink" bold="true" underline="single"/>
+  <style name="def:note"                    foreground="sweet-green" bold="true"/>
+
+  <!-- Markup -->
+  <style name="def:link-text"               foreground="sweet-blue" underline="single"/>
+  <style name="def:heading"                 foreground="sweet-pink" bold="true"/>
+</style-scheme>
+

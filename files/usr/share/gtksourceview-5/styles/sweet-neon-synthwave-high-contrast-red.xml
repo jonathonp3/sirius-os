@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<style-scheme id="sweet-neon-synthwave-high-contrast-red" _name="Sweet (High Contrast Red)" version="1.0">
+  <author>Eliver Lara / Jonathon</author>
+  <_description>Vibrant synthwave palette with pronounced Cobalt-style reds</_description>
+
+  <!-- Sweet Palette (High Contrast Update) -->
+  <color name="sweet-bg"      value="#1b1e2b"/> <!-- Deep Dark Indigo -->
+  <color name="sweet-fg"      value="#fcfcfa"/> <!-- White -->
+  <color name="sweet-gray"    value="#5c6370"/> <!-- Muted UI -->
+  
+  <!-- Red & Orange: Shifted from soft pink to aggressive Cobalt Red -->
+  <color name="sweet-red"     value="#FF2E44"/> <!-- Pronounced Electric Red -->
+  <color name="sweet-orange"  value="#FF8C00"/> <!-- Deep Vibrant Orange -->
+  
+  <color name="sweet-purple"  value="#c76dd3"/> 
+  <color name="sweet-blue"    value="#00bfff"/> <!-- Deep Sky Blue -->
+  <color name="sweet-cyan"    value="#00f5ff"/> <!-- High Contrast Cyan -->
+  <color name="sweet-green"   value="#39ff14"/> <!-- Neon Green -->
+  <color name="sweet-yellow"  value="#ffe53b"/> <!-- Electric Yellow -->
+
+  <!-- Global Settings -->
+  <style name="text"                        foreground="sweet-fg" background="sweet-bg"/>
+  <style name="selection"                   background="#3e4451"/>
+  <style name="cursor"                      foreground="sweet-cyan"/>
+  <style name="current-line"                background="#242938"/>
+  <style name="line-numbers"                foreground="sweet-gray" background="sweet-bg"/>
+  <style name="draw-spaces"                 foreground="#454b68"/>
+
+  <!-- Syntax Highlighting -->
+  <style name="def:comment"                 foreground="sweet-gray" italic="true"/>
+  <style name="def:constant"                foreground="sweet-purple"/>
+  <style name="def:identifier"              foreground="sweet-cyan"/>
+  
+  <!-- Main Statements: Now uses the Pronounced Red -->
+  <style name="def:statement"               foreground="sweet-red" bold="true"/>
+  <style name="def:keyword"                 foreground="sweet-red" bold="true"/>
+  
+  <style name="def:type"                    foreground="sweet-yellow"/>
+  <style name="def:operator"                foreground="sweet-cyan"/>
+  <style name="def:preprocessor"            foreground="sweet-orange"/>
+  
+  <!-- Errors: Maximum Contrast Red -->
+  <style name="def:error"                   foreground="#FF0000" bold="true" underline="single"/>
+  <style name="def:note"                    foreground="sweet-green" bold="true"/>
+
+  <!-- Markup -->
+  <style name="def:link-text"               foreground="sweet-blue" underline="single"/>
+  <style name="def:heading"                 foreground="sweet-red" bold="true"/>
+</style-scheme>
+

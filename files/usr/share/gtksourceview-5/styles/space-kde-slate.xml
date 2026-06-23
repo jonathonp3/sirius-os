@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<style-scheme id="space-kde-slate" _name="Space KDE (Slate Dark)" version="1.0">
+  <author>Eliver Lara / Jonathon</author>
+  <_description>Deep slate-blue theme inspired by Space-KDE</_description>
+
+  <!-- Space-KDE Palette -->
+  <color name="space-bg"      value="#232b33"/> <!-- Deep Slate Background -->
+  <color name="space-fg"      value="#dae1e7"/> <!-- Silver-Blue Text -->
+  <color name="space-line"    value="#2d3640"/> <!-- Subtle Current Line -->
+  <color name="space-sel"     value="#3b4652"/> <!-- Selection -->
+  
+  <color name="space-violet"  value="#c592ff"/> <!-- Keywords / Main Accent -->
+  <color name="space-blue"    value="#80ccff"/> <!-- Functions -->
+  <color name="space-cyan"    value="#92ffff"/> <!-- Identifiers -->
+  <color name="space-amber"   value="#ffcc66"/> <!-- Types / Special -->
+  <color name="space-orange"  value="#ff9966"/> <!-- Constants -->
+  <color name="space-green"   value="#99ff99"/> <!-- Strings -->
+  <color name="space-gray"    value="#6c7a89"/> <!-- Comments -->
+  <color name="space-red"     value="#ff6666"/> <!-- Errors -->
+
+  <!-- Global Settings -->
+  <style name="text"                        foreground="space-fg" background="space-bg"/>
+  <style name="selection"                   background="space-sel"/>
+  <style name="cursor"                      foreground="space-violet"/>
+  <style name="current-line"                background="space-line"/>
+  <style name="line-numbers"                foreground="space-gray" background="space-bg"/>
+  <style name="draw-spaces"                 foreground="#3d4957"/>
+
+  <!-- Syntax Highlighting -->
+  <style name="def:comment"                 foreground="space-gray" italic="true"/>
+  <style name="def:constant"                foreground="space-orange"/>
+  <style name="def:special-char"            foreground="space-amber"/>
+  <style name="def:identifier"              foreground="space-cyan"/>
+  <style name="def:function"                foreground="space-blue"/>
+  <style name="def:statement"               foreground="space-violet" bold="true"/>
+  <style name="def:keyword"                 foreground="space-violet"/>
+  <style name="def:type"                    foreground="space-amber"/>
+  <style name="def:operator"                foreground="space-violet"/>
+  <style name="def:preprocessor"            foreground="space-blue"/>
+  <style name="def:error"                   foreground="space-red" bold="true" underline="single"/>
+  <style name="def:note"                    foreground="space-green" bold="true"/>
+
+  <!-- Markup -->
+  <style name="def:link-text"               foreground="space-blue" underline="single"/>
+  <style name="def:heading"                 foreground="space-violet" bold="true"/>
+</style-scheme>
+

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<style-scheme id="nord-light-arctic" _name="Nord Light (Arctic)" version="1.0">
+  <author>Arctic Ice Studio / Jonathon</author>
+  <_description>Arctic North-Blue clean light theme</_description>
+
+  <!-- Nord Palette -->
+  <color name="nord0" value="#2E3440"/> <!-- Darkest -->
+  <color name="nord1" value="#3B4252"/>
+  <color name="nord2" value="#434C5E"/>
+  <color name="nord3" value="#4C566A"/>
+  <color name="nord4" value="#D8DEE9"/>
+  <color name="nord5" value="#E5E9F0"/>
+  <color name="nord6" value="#ECEFF4"/> <!-- Background -->
+  
+  <color name="nord7" value="#8FBCBB"/> <!-- Cyan -->
+  <color name="nord8" value="#88C0D0"/> <!-- Blue -->
+  <color name="nord9" value="#81A1C1"/> <!-- Glacial Blue -->
+  <color name="nord10" value="#5E81AC"/> <!-- Deep Blue -->
+  <color name="nord11" value="#BF616A"/> <!-- Red -->
+  <color name="nord12" value="#D08770"/> <!-- Orange -->
+  <color name="nord13" value="#EBCB8B"/> <!-- Yellow -->
+  <color name="nord14" value="#A3BE8C"/> <!-- Green -->
+  <color name="nord15" value="#B48EAD"/> <!-- Purple -->
+
+  <!-- Global Settings -->
+  <style name="text"                        foreground="nord3" background="nord6"/>
+  <style name="selection"                   background="nord4"/>
+  <style name="cursor"                      foreground="nord3"/>
+  <style name="current-line"                background="nord5"/>
+  <style name="line-numbers"                foreground="nord3" background="nord5"/>
+
+  <!-- Syntax -->
+  <style name="def:comment"                 foreground="nord3" italic="true"/>
+  <style name="def:constant"                foreground="nord15"/>
+  <style name="def:identifier"              foreground="nord8"/>
+  <style name="def:statement"               foreground="nord10" bold="true"/>
+  <style name="def:type"                    foreground="nord7"/>
+  <style name="def:operator"                foreground="nord9"/>
+  <style name="def:preprocessor"            foreground="nord10"/>
+  <style name="def:error"                   foreground="nord11" bold="true"/>
+  <style name="def:note"                    foreground="nord13" bold="true"/>
+</style-scheme>
+

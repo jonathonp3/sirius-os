@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<style-scheme id="dracula-official-high-contrast" _name="Dracula (High Contrast)" version="1.0">
+  <author>Zeno Rocha / Jonathon</author>
+  <_description>Enhanced high-contrast Dracula palette with deep blacks and vivid neons</_description>
+
+  <!-- High Contrast Dracula Palette -->
+  <color name="background"  value="#181a21"/> <!-- Darker, deeper charcoal -->
+  <color name="currentline" value="#2d2f3d"/> <!-- Subtle but distinct -->
+  <color name="foreground"  value="#ffffff"/> <!-- Pure white for maximum crispness -->
+  <color name="comment"     value="#798dc5"/> <!-- Brighter lavender-gray for better readability -->
+  
+  <!-- "Electric" Versions of Dracula Colors -->
+  <color name="cyan"        value="#00f2ff"/> 
+  <color name="green"       value="#45fe8c"/>
+  <color name="orange"      value="#ff9500"/>
+  <color name="pink"        value="#ff55ff"/>
+  <color name="purple"      value="#bf94ff"/>
+  <color name="red"         value="#ff2e44"/>
+  <color name="yellow"      value="#ffff00"/>
+
+  <!-- Global Settings -->
+  <style name="text"                        foreground="foreground" background="background"/>
+  <style name="selection"                   background="#3e4451"/>
+  <style name="cursor"                      foreground="cyan"/>
+  <style name="current-line"                background="currentline"/>
+  <style name="line-numbers"                foreground="comment" background="#101217"/>
+
+  <!-- Syntax Highlighting (More Bold) -->
+  <style name="def:comment"                 foreground="comment" italic="true"/>
+  <style name="def:constant"                foreground="purple" bold="true"/>
+  <style name="def:special-char"            foreground="pink"/>
+  <style name="def:identifier"              foreground="cyan"/>
+  <style name="def:function"                foreground="green"/>
+  
+  <!-- Keywords & Statements: Popping like Cobalt -->
+  <style name="def:statement"               foreground="pink" bold="true"/>
+  <style name="def:keyword"                 foreground="cyan" bold="true"/>
+  
+  <style name="def:type"                    foreground="yellow" italic="false" bold="true"/>
+  <style name="def:operator"                foreground="pink"/>
+  <style name="def:preprocessor"            foreground="orange" bold="true"/>
+  <style name="def:error"                   foreground="red" bold="true" underline="single"/>
+  <style name="def:note"                    foreground="yellow" bold="true"/>
+  <style name="def:underlined"              underline="single"/>
+
+</style-scheme>
+

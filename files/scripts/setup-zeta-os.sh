@@ -84,7 +84,7 @@ cp /usr/libexec/piavpn/usr/share/pixmaps/piavpn.png /usr/share/pixmaps/piavpn.pn
 sed -i 's|ExecStart=.*|ExecStart=/opt/piavpn/bin/pia-daemon|' /usr/lib/systemd/system/piavpn.service
 sed -i '/\[Service\]/a WorkingDirectory=/opt/piavpn' /usr/lib/systemd/system/piavpn.service
 
-# --- 6. PERMISSIONS and FINALIZE ------
+# --- 6. PERMISSIONS ----
 setcap 'cap_net_bind_service=+ep' /usr/libexec/piavpn/opt/piavpn/bin/pia-unbound || true
 
 # These will work now because we ran 'groupadd' in Step 1
@@ -93,6 +93,19 @@ chown root:piavpn /usr/libexec/piavpn/opt/piavpn/bin/piactl
 chmod 755 /usr/libexec/piavpn/opt/piavpn/bin/pia-client
 chmod 755 /usr/libexec/piavpn/opt/piavpn/bin/piactl
 
+# --- 7. NATIVE EDITOR INTEGRATION ---
+# Remove the Flatpak version
+flatpak uninstall --system -y org.gnome.TextEditor || true
+
+# Set favourite as default
+mkdir -p /usr/share/glib-2.0/schemas/
+cat <<EOF > /usr/share/glib-2.0/schemas/99-wolf-os-editor.gschema.override
+[org.gnome.TextEditor]
+style-scheme='solarized-light-golden-sand'
+EOF
+glib-compile-schemas /usr/share/glib-2.0/schemas/
+
+# --- 8. FINALIZE --- 
 systemctl enable virtlogd.service piavpn.service docker.service
 
 echo "✅ Zeta-OS Custom Assembly Complete!"

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<style-scheme id="kimi-dark-modern-muted" _name="Kimi (Muted Slate)" version="1.0">
+  <author>Eliver Lara / Jonathon</author>
+  <_description>Extra-low contrast version of Kimi for zero-glare coding</_description>
+
+  <!-- Muted Kimi Palette -->
+  <color name="kimi-bg"      value="#1b1d24"/> <!-- Deep Charcoal -->
+  <color name="kimi-fg"      value="#9ba1a6"/> <!-- Muted Slate (Significantly reduces glare) -->
+  <color name="kimi-line"    value="#242730"/> <!-- Very Subtle Current Line -->
+  <color name="kimi-sel"     value="#313642"/> <!-- Muted Selection -->
+  
+  <!-- "Dusty" Kimi Accents (Low Saturation & Brightness) -->
+  <color name="kimi-peach"   value="#c58b71"/> 
+  <color name="kimi-violet"  value="#8e7eb5"/> 
+  <color name="kimi-teal"    value="#5b9ba6"/> 
+  <color name="kimi-cyan"    value="#6ba6b5"/> 
+  <color name="kimi-blue"    value="#6b86c4"/> 
+  <color name="kimi-gray"    value="#545b66"/> <!-- Dim comments -->
+  <color name="kimi-red"     value="#b55c61"/> 
+  <color name="kimi-green"   value="#7e9e62"/> 
+
+  <!-- Global Settings -->
+  <style name="text"                        foreground="kimi-fg" background="kimi-bg"/>
+  <style name="selection"                   background="kimi-sel"/>
+  <style name="cursor"                      foreground="kimi-peach"/>
+  <style name="current-line"                background="kimi-line"/>
+  <style name="line-numbers"                foreground="kimi-gray" background="#16181f"/>
+  <style name="draw-spaces"                 foreground="#353a45"/>
+
+  <!-- Syntax Highlighting (No bolding to prevent "fuzziness" on dim text) -->
+  <style name="def:comment"                 foreground="kimi-gray" italic="true"/>
+  <style name="def:constant"                foreground="kimi-teal"/>
+  <style name="def:special-char"            foreground="kimi-peach"/>
+  <style name="def:identifier"              foreground="kimi-cyan"/>
+  <style name="def:function"                foreground="kimi-blue"/>
+  
+  <!-- Keywords kept slightly more visible but not bright -->
+  <style name="def:statement"               foreground="kimi-peach" bold="false"/>
+  <style name="def:keyword"                 foreground="kimi-violet" bold="false"/>
+  
+  <style name="def:type"                    foreground="kimi-green"/>
+  <style name="def:operator"                foreground="kimi-fg"/>
+  <style name="def:preprocessor"            foreground="kimi-peach"/>
+  <style name="def:error"                   foreground="kimi-red" underline="single"/>
+  <style name="def:note"                    foreground="kimi-green" bold="true"/>
+
+  <!-- Markup -->
+  <style name="def:link-text"               foreground="kimi-blue" underline="single"/>
+  <style name="def:heading"                 foreground="kimi-violet" bold="true"/>
+</style-scheme>
+

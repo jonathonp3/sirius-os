@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<style-scheme id="dracula-official" _name="Dracula (Official)" version="1.0">
+  <author>Zeno Rocha / Jonathon</author>
+  <_description>Official Dracula dark theme palette</_description>
+
+  <!-- Dracula Palette -->
+  <color name="background"  value="#282A36"/>
+  <color name="currentline" value="#44475A"/>
+  <color name="foreground"  value="#F8F8F2"/>
+  <color name="comment"     value="#6272A4"/>
+  <color name="cyan"        value="#8BE9FD"/>
+  <color name="green"       value="#50FA7B"/>
+  <color name="orange"      value="#FFB86C"/>
+  <color name="pink"        value="#FF79C6"/>
+  <color name="purple"      value="#BD93F9"/>
+  <color name="red"         value="#FF5555"/>
+  <color name="yellow"      value="#F1FA8C"/>
+
+  <!-- Global Settings -->
+  <style name="text"                        foreground="foreground" background="background"/>
+  <style name="selection"                   background="currentline"/>
+  <style name="cursor"                      foreground="foreground"/>
+  <style name="current-line"                background="currentline"/>
+  <style name="line-numbers"                foreground="comment" background="background"/>
+
+  <!-- Syntax -->
+  <style name="def:comment"                 foreground="comment" italic="true"/>
+  <style name="def:constant"                foreground="purple"/>
+  <style name="def:special-char"            foreground="pink"/>
+  <style name="def:identifier"              foreground="cyan" italic="true"/>
+  <style name="def:statement"               foreground="pink" bold="true"/>
+  <style name="def:type"                    foreground="cyan" italic="true"/>
+  <style name="def:operator"                foreground="pink"/>
+  <style name="def:preprocessor"            foreground="orange"/>
+  <style name="def:error"                   foreground="red" bold="true" underline="single"/>
+  <style name="def:note"                    foreground="yellow" bold="true"/>
+  <style name="def:underlined"              underline="single"/>
+
+</style-scheme>
+

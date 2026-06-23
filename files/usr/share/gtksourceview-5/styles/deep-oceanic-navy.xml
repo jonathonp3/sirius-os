@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<style-scheme id="deep-oceanic-navy" _name="Deep Oceanic (Navy)" version="1.0">
+  <author>Jonathon</author>
+  <_description>Rich dark blue background with soft pastel syntax</_description>
+
+  <!-- Deep Ocean Palette -->
+  <color name="ocean-bg"      value="#0f172a"/> <!-- Deep Navy Background -->
+  <color name="ocean-fg"      value="#e2e8f0"/> <!-- Off-white Text -->
+  <color name="ocean-line"    value="#1e293b"/> <!-- Slightly lighter blue for current line -->
+  <color name="ocean-selection" value="#334155"/> <!-- Muted selection -->
+  <color name="ocean-gray"    value="#64748b"/> <!-- Comments/UI -->
+  
+  <color name="ocean-cyan"    value="#38bdf8"/>
+  <color name="ocean-blue"    value="#60a5fa"/>
+  <color name="ocean-purple"  value="#c084fc"/>
+  <color name="ocean-pink"    value="#f472b6"/>
+  <color name="ocean-orange"  value="#fb923c"/>
+  <color name="ocean-yellow"  value="#fbbf24"/>
+  <color name="ocean-green"   value="#4ade80"/>
+  <color name="ocean-red"      value="#f87171"/>
+
+  <!-- Global Settings -->
+  <style name="text"                        foreground="ocean-fg" background="ocean-bg"/>
+  <style name="selection"                   background="ocean-selection"/>
+  <style name="cursor"                      foreground="ocean-cyan"/>
+  <style name="current-line"                background="ocean-line"/>
+  <style name="line-numbers"                foreground="ocean-gray" background="ocean-bg"/>
+
+  <!-- Syntax Highlighting -->
+  <style name="def:comment"                 foreground="ocean-gray" italic="true"/>
+  <style name="def:constant"                foreground="ocean-pink"/>
+  <style name="def:identifier"              foreground="ocean-cyan"/>
+  <style name="def:statement"               foreground="ocean-purple" bold="true"/>
+  <style name="def:type"                    foreground="ocean-yellow"/>
+  <style name="def:operator"                foreground="ocean-orange"/>
+  <style name="def:preprocessor"            foreground="ocean-blue"/>
+  <style name="def:error"                   foreground="ocean-red" bold="true" underline="single"/>
+  <style name="def:note"                    foreground="ocean-green" bold="true"/>
+
+  <!-- Markup -->
+  <style name="def:link-text"               foreground="ocean-blue" underline="single"/>
+  <style name="def:heading"                 foreground="ocean-cyan" bold="true"/>
+</style-scheme>
+

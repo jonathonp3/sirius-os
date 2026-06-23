@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<style-scheme id="space-kde-slate-high-contrast" _name="Space KDE (High Contrast)" version="1.0">
+  <author>Eliver Lara / Jonathon</author>
+  <_description>High-contrast Deep Midnight theme inspired by Cobalt and Space-KDE</_description>
+
+  <!-- Space-KDE Cobalt Palette -->
+  <color name="space-bg"      value="#121b21"/> <!-- Deep Midnight Blue (Darker) -->
+  <color name="space-fg"      value="#ffffff"/> <!-- Pure White Text -->
+  <color name="space-line"    value="#1a252b"/> <!-- Subtle Current Line -->
+  <color name="space-sel"     value="#24333d"/> <!-- Higher Contrast Selection -->
+  
+  <color name="space-violet"  value="#d499ff"/> <!-- Electric Violet -->
+  <color name="space-blue"    value="#33bbff"/> <!-- Saturated Sky Blue -->
+  <color name="space-cyan"    value="#00f2ff"/> <!-- Neon Cyan -->
+  <color name="space-amber"   value="#ffc600"/> <!-- Cobalt Yellow -->
+  <color name="space-orange"  value="#ff8c00"/> <!-- Vivid Orange -->
+  <color name="space-green"   value="#39ff14"/> <!-- Matrix Green -->
+  <color name="space-gray"    value="#7d8da4"/> <!-- Brighter Comments for readability -->
+  <color name="space-red"     value="#ff2e44"/> <!-- Power Red -->
+
+  <!-- Global Settings -->
+  <style name="text"                        foreground="space-fg" background="space-bg"/>
+  <style name="selection"                   background="space-sel"/>
+  <style name="cursor"                      foreground="space-cyan"/>
+  <style name="current-line"                background="space-line"/>
+  <style name="line-numbers"                foreground="space-gray" background="#0d141a"/>
+  <style name="draw-spaces"                 foreground="#3d4957"/>
+
+  <!-- Syntax Highlighting -->
+  <style name="def:comment"                 foreground="space-gray" italic="true"/>
+  <style name="def:constant"                foreground="space-orange" bold="true"/>
+  <style name="def:special-char"            foreground="space-amber"/>
+  <style name="def:identifier"              foreground="space-cyan"/>
+  <style name="def:function"                foreground="space-blue"/>
+  <style name="def:statement"               foreground="space-amber" bold="true"/>
+  <style name="def:keyword"                 foreground="space-violet" bold="true"/>
+  <style name="def:type"                    foreground="space-green" bold="true"/>
+  <style name="def:operator"                foreground="space-cyan"/>
+  <style name="def:preprocessor"            foreground="space-blue"/>
+  <style name="def:error"                   foreground="space-red" bold="true" underline="single"/>
+  <style name="def:note"                    foreground="space-green" bold="true"/>
+
+  <!-- Markup -->
+  <style name="def:link-text"               foreground="space-blue" underline="single"/>
+  <style name="def:heading"                 foreground="space-violet" bold="true"/>
+</style-scheme>
+
