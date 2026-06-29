@@ -1,10 +1,10 @@
 [Unit]
-Description=Wolf-OS First Boot Cleanup
+Description=Sirius-OS First Boot Cleanup
 After=network-online.target
 
 [Service]
 Type=oneshot
-ExecStart=/usr/libexec/wolf-os-firstboot.sh
+ExecStart=/usr/libexec/sirius-os-firstboot.sh
 RemainAfterExit=yes
 
 [Install]

@@ -1,0 +1,13 @@
+[Unit]
+Description=Apply piavpn tmpfiles
+DefaultDependencies=no
+Before=virtnetworkd.service
+Wants=virtnetworkd.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/systemd-tmpfiles --create /usr/lib/tmpfiles.d/piavpn.conf
+
+[Install]
+WantedBy=multi-user.target
+

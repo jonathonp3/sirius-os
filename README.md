@@ -1,6 +1,6 @@
-# Zeta-OS
+# Sirius-OS
 
-Zeta-OS is my personal OS image built from [Bazzite](https://github.com/ublue-os/bazzite/) with Private Internet Access (PIA) integrated into the image. It also includes a full virtualization stack, including Docker.
+Sirius-OS is my personal OS image built from [Bazzite](https://github.com/ublue-os/bazzite/) with Private Internet Access (PIA) integrated into the image. It also includes a full virtualization stack, including Docker.
 
 ## Components
 - [Bazzite](https://bazzite.gg/)
@@ -22,7 +22,7 @@ The first step is to rebase from Fedora Silverblue:
 
 1. Rebase to the unsigned image:
 ```bash
-rpm-ostree rebase ostree-unverified-registry:ghcr.io/jonathonp3/zeta-os:latest
+rpm-ostree rebase ostree-unverified-registry:ghcr.io/jonathonp3/sirius-os:latest
 ```
 
 2. Reboot to complete the rebase:
@@ -32,7 +32,7 @@ systemctl reboot
 
 3. Rebase to the signed image:
 ```bash
-rpm-ostree rebase ostree-image-signed:docker://ghcr.io/jonathonp3/zeta-os:latest
+rpm-ostree rebase ostree-image-signed:docker://ghcr.io/jonathonp3/sirius-os:latest
 ```
 
 4. Reboot again to complete the installation
@@ -60,7 +60,7 @@ podman run --pull always --rm ghcr.io/blue-build/cli:latest-installer | bash
 
 2. Generate the ISO from the repository image:
 ```bash
-sudo bluebuild generate-iso --iso-name zeta-os.iso image ghcr.io/jonathonp3/zeta-os:latest
+sudo bluebuild generate-iso --iso-name zeta-os.iso image ghcr.io/jonathonp3/sirius-os:latest
 ```
 
 ## How to revert back to the stock Bazzite image:

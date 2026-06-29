@@ -11,19 +11,19 @@ modules:
   # Everything in your 'files/' folder is mapped here
   - type: files
     files:
-      - source: etc
-        destination: /etc
-      - source: usr
-        destination: /usr
       - source: tmp/pia-backup.tar.xz
         destination: /tmp/pia-backup.tar.xz
-      - source: usr/share/gtksourceview-5/styles
-        destination: /usr/share/gtksourceview-5/styles
       # Nest inside the 'files' module
-      - source: usr/libexec/wolf-os-firstboot.sh
-        destination: /usr/libexec/wolf-os-firstboot.sh
-      - source: usr/lib/systemd/system/wolf-os-cleanup.service
-        destination: /usr/lib/systemd/system/wolf-os-cleanup.service  
+      - source: usr/libexec/sirius-os-firstboot.sh
+        destination: /usr/libexec/sirius-os-firstboot.sh
+      - source: usr/lib/systemd/system/sirius-os-cleanup.service
+        destination: /usr/lib/systemd/system/sirius-os-cleanup.service
+      - source: usr/lib/tmpfiles.d/piavpn.conf
+        destination: /usr/lib/tmpfiles.d/piavpn.conf
+      - source: usr/lib/systemd/system/piavpn-tmpfiles.service
+        destination: /usr/lib/systemd/system/piavpn-tmpfiles.service 
+      - source: usr/lib/sysusers.d/sirius-os.conf  
+        destination: /usr/lib/sysusers.d/sirius-os.conf       
 
   # 2. Modular Repos and Packages
   - from-file: ../modules/repository.yml
@@ -32,7 +32,7 @@ modules:
   # 3: Custom Assembly (The Script)
   - type: script
     scripts:
-      - setup-zeta-os.sh
+      - setup-sirius-os.sh
 
   # 4: Security
   - type: signing
