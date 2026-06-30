@@ -58,40 +58,53 @@ if [ -n "$WINBOAT_URL" ]; then
     curl -L "$WINBOAT_URL" -o /tmp/winboat.rpm
     
     echo "📦 Installing Winboat RPM..."
+    # Only install once!
     rpm -i --noscripts /tmp/winboat.rpm || echo "⚠️ Warning: Winboat install failed, continuing..."
     
-    echo "🔧 Performing manual integration for Winboat..."
+    echo "🔧 Moving Winboat to Immutable Storage (The 'Truth')..."
+    # Move the 'Truth' to immutable storage (like we did for PIA)
+    mkdir -p /usr/libexec/winboat
+    cp -r /opt/winboat/* /usr/libexec/winboat/
+
+    # Now that the files are safely in /usr/libexec, we can remove the /opt version 
+    # (tmpfiles.d will recreate /opt/winboat as a link on boot)
+    rm -rf /opt/winboat
+
+    echo "🔧 Performing manual integration..."
     
-    # 1. Create the binary link
-    ln -sf /opt/winboat/winboat /usr/bin/winboat
+    # 1. Create the binary link pointing to our immutable 'Truth'
+    ln -sf /usr/libexec/winboat/winboat /usr/bin/winboat
     
-    # 2. Set sandbox permissions
-    if [ -f /opt/winboat/chrome-sandbox ]; then
-        chmod 4755 /opt/winboat/chrome-sandbox || true
+    # 2. Set sandbox permissions on the immutable version
+    if [ -f /usr/libexec/winboat/chrome-sandbox ]; then
+        chmod 4755 /usr/libexec/winboat/chrome-sandbox || true
     fi
     
     # 3. FIX MISSING ICON/DESKTOP ENTRY
     # Ensure the desktop file is in the correct location
-    if [ -f /opt/winboat/resources/winboat.desktop ]; then
-        cp -f /opt/winboat/resources/winboat.desktop /usr/share/applications/winboat.desktop
+    if [ -f /usr/libexec/winboat/resources/winboat.desktop ]; then
+        cp -f /usr/libexec/winboat/resources/winboat.desktop /usr/share/applications/winboat.desktop
+        # Fix the path inside the desktop file to use our new location
+        sed -i 's|Exec=/opt/winboat/winboat|Exec=/usr/bin/winboat|g' /usr/share/applications/winboat.desktop
     fi
-
-    # Force the icon cache to update
-    # Electron apps often put icons in /usr/share/icons/hicolor
+    
+    # Force the databases to update so the icon appears
     if [ -d /usr/share/icons/hicolor ]; then
         gtk-update-icon-cache /usr/share/icons/hicolor || true
     fi
-
-    # Update system databases so icons and menu entries show up
     update-mime-database /usr/share/mime || true
     update-desktop-database /usr/share/applications || true
     
+    # 4. Clean up the installer
     rm /tmp/winboat.rpm
+    
     echo "✅ Winboat integration complete."
 else
     echo "⚠️ Warning: Could not find Winboat URL."
 fi
 
+# Update the Binary Symlink
+ln -sf /usr/libexec/winboat/winboat /usr/bin/winboat 
 
 # --- 5. FINALISE --- 
 systemctl enable libvirtd.service virtlogd.service virtnetworkd.service virtstoraged.service virtnodedevd.socket piavpn.service sshd.service docker.service sirius-os-cleanup.service piavpn-tmpfiles.service
