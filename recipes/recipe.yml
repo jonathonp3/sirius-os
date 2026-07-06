@@ -1,0 +1,33 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+name: sirius-os
+description: My personal Bazzite-based OS image for the family.
+
+base-image: ghcr.io/ublue-os/bazzite-gnome
+image-version: latest
+
+modules:
+  # 1. THE CONSOLIDATED OVERLAY
+  # Everything in your 'files/' folder is mapped here
+  - type: files
+    files:
+      # Nest inside the 'files' module
+      - source: usr/libexec/sirius-os-firstboot.sh
+        destination: /usr/libexec/sirius-os-firstboot.sh
+      - source: usr/lib/systemd/system/sirius-os-cleanup.service
+        destination: /usr/lib/systemd/system/sirius-os-cleanup.service
+      - source: usr/lib/sysusers.d/sirius-os.conf  
+        destination: /usr/lib/sysusers.d/sirius-os.conf       
+
+  # 2. Modular Repos and Packages
+  - from-file: ../modules/repository.yml
+  - from-file: ../modules/packages.yml
+  
+  # 3: Custom Assembly (The Script)
+  - type: script
+    scripts:
+      - setup-sirius-os.sh
+
+  # 4: Security
+  - type: signing
+

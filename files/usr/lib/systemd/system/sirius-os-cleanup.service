@@ -1,0 +1,12 @@
+[Unit]
+Description=Sirius-OS First Boot Cleanup
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/sirius-os-firstboot.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+

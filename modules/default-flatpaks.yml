@@ -1,0 +1,56 @@
+# yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
+type: default-flatpaks
+configurations:
+  - scope: system
+    # notify: false
+    install:
+      # silverblue default apps
+      # silverblue default apps
+      - org.gnome.Calculator # Calculator
+      - org.gnome.Calendar # Calendar
+      - org.gnome.Characters # Characters
+      - org.gnome.Connections # Connections
+      - org.gnome.Contacts # Contacts
+      - org.gnome.Evince # Document Viewer
+      # org.gnome.Extensions # Manage GNOME Extensions
+      # org.virt_manager.virt-manager # Virtual Machine Manager
+      - org.gnome.Logs # Logs
+      - org.gnome.Loupe # Image Viewer
+      - org.mozilla.firefox # Web Browser
+      - org.gnome.Maps # Maps
+      - org.libreoffice.LibreOffice # The LibreOffice productivity suite
+      - org.gnome.NautilusPreviewer
+      - org.gnome.Snapshot # Camera
+      - org.gnome.TextEditor # Text Editor
+      - org.gnome.Weather
+      - org.gnome.baobab # Disk Usage Analyzer
+      - org.gnome.clocks
+      - org.gnome.font-viewer
+
+      # additional apps
+      - com.brave.Browser
+      - com.discordapp.Discord # Discord - Messaging, voice and video client
+      - com.freerdp.FreeRDP # FreeRDP is a free implementation of the Remote Desktop Protocol RDP
+      - com.github.tchx84.Flatseal # Flatseal
+      - com.github.rafostar.Clapper # Clapper
+      - com.google.Chrome # Google CHrome
+      - com.mattjakeman.ExtensionManager # Extension Manager
+      - com.mojang.Minecraft # Minecraft
+      - com.spotify.Client # Spotify Desktop
+      # chat.schildi.desktop # A feature-rich messenger for Matrix based on Element with some extras and tweaks
+      - im.riot.Riot # Element - Messenger for Matrix
+      - io.bassi.Amberol # Amberol Music Player
+      - it.mijorus.gearlever # Gear Lever Manage AppImages
+      - org.gimp.GIMP # GNU Image Create images and edit photographs
+      # org.gnome.Fractal # Chat on Matrix 
+      - org.freac.freac # fre:ac Audio converter and CD ripper
+      - org.kde.kdenlive # Video editor
+      # org.kde.kid3 # Edit audio file metadata
+      - org.keepassxc.KeePassXC # KeePassXC
+      - org.gnome.Evolution # Evolution
+      - org.gnome.gThumb # gThumb Image Viewer
+      - org.gnome.Rhythmbox3 # Rhythmbox
+      # org.signal.Signal # Signal Desktop
+      - org.telegram.desktop # Telegram Desktop
+      - org.videolan.VLC # VLC Player
+      - org.vinegarhq.Sober # Roblox in linux
