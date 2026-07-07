@@ -26,7 +26,7 @@ modules:
       - source: usr/share/applications/piavpn.desktop
         destination: /usr/share/applications/piavpn.desktop
       - source: usr/share/pixmaps/piavpn.png
-        destination: /usr/share/pixmaps/piavpn.png      
+        destination: /usr/share/pixmaps/piavpn.png
 
   # 2. Modular Repos and Packages
   - from-file: ../modules/repository.yml
