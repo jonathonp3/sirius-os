@@ -17,7 +17,14 @@ modules:
       - source: usr/lib/systemd/system/sirius-os-cleanup.service
         destination: /usr/lib/systemd/system/sirius-os-cleanup.service
       - source: usr/lib/sysusers.d/sirius-os.conf  
-        destination: /usr/lib/sysusers.d/sirius-os.conf       
+        destination: /usr/lib/sysusers.d/sirius-os.conf
+      - source: usr/lib/tmpfiles.d/apps.conf 
+        destination: /usr/lib/tmpfiles.d/apps.conf
+      # VPN preparation
+      - source: usr/share/applications/piavpn.desktop
+        destination: /usr/share/applications/piavpn.desktop
+      - source: usr/share/pixmaps/piavpn.png
+        destination: /usr/share/pixmaps/piavpn.png      
 
   # 2. Modular Repos and Packages
   - from-file: ../modules/repository.yml
