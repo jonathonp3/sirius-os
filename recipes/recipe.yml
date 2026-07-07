@@ -16,6 +16,8 @@ modules:
         destination: /usr/libexec/sirius-os-firstboot.sh
       - source: usr/lib/systemd/system/sirius-os-cleanup.service
         destination: /usr/lib/systemd/system/sirius-os-cleanup.service
+      - source: usr/lib/systemd/system/app-tmpfiles.service
+        destination: /usr/lib/systemd/system/app-tmpfiles.service        
       - source: usr/lib/sysusers.d/sirius-os.conf  
         destination: /usr/lib/sysusers.d/sirius-os.conf
       - source: usr/lib/tmpfiles.d/apps.conf 
