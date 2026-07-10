@@ -31,17 +31,8 @@ install:
   - docker-buildx-plugin
   - docker-compose-plugin
   
-    # PIA
-  - libnsl
-  - libxcrypt-compat
-  - nss-tools
-  - xterm
-  - libXaw
-  - libutempter
-  - mkfontscale
-  - xorg-x11-fonts-misc
-  - libxkbcommon-x11
-  - wget2
+   ## PIA
+  - sirius-os-pia-installer
   
   # Winboat
   # https://github.com/TibixDev/winboat/releases/latest/download/winboat-x86_64.rpm
