@@ -20,8 +20,8 @@ modules:
         destination: /usr/lib/systemd/system/app-tmpfiles.service        
       - source: usr/lib/sysusers.d/sirius-os.conf  
         destination: /usr/lib/sysusers.d/sirius-os.conf
-      - source: usr/lib/tmpfiles.d/apps.conf 
-        destination: /usr/lib/tmpfiles.d/apps.conf
+      # source: usr/lib/tmpfiles.d/apps.conf 
+      # destination: /usr/lib/tmpfiles.d/apps.conf
 
   # 2. Modular Repos and Packages
   - from-file: ../modules/repository.yml

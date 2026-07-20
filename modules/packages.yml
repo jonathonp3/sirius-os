@@ -10,19 +10,25 @@ install:
   
   - pluma
   # rhythmbox
-  # samba
-  # samba-client
+  - samba
+  - samba-client
   # simple-scan
   # syncthing
   # vlc
   - yt-dlp
   
+  # PIA VPN
+  - wolf-os-pia-installer
+
+  # Virtualisation stack
+  - wolf-os-virtualization
+  
   ## Virt-Manager
-  - libvirt-daemon-kvm
-  - qemu-kvm
-  - virt-install
-  - virt-manager
-  - virt-viewer
+  # libvirt-daemon-kvm
+  # qemu-kvm
+  # virt-install
+  # virt-manager
+  # virt-viewer
 
   ## Docker
   - docker-ce
