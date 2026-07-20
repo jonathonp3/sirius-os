@@ -18,10 +18,10 @@ install:
   - yt-dlp
   
   # PIA VPN
-  - wolf-os-pia-installer
+  - sirius-os-pia-installer
 
   # Virtualisation stack
-  - wolf-os-virtualization
+  - sirius-os-virtualization
   
   ## Virt-Manager
   # libvirt-daemon-kvm
