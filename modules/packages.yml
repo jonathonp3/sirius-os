@@ -12,13 +12,11 @@ install:
   # rhythmbox
   - samba
   - samba-client
+  - sirius-os-ocs-url
   # simple-scan
   # syncthing
   # vlc
   - yt-dlp
-  
-  # PIA VPN
-  - sirius-os-pia-installer
 
   # Virtualisation stack
   - sirius-os-virtualization
