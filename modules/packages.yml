@@ -8,11 +8,12 @@ install:
   # https://extensions.gnome.org/extension/9558/gnome-wallpaper-engine/
   - mpv
   
+  - ocs-url
   - pluma
   # rhythmbox
   - samba
   - samba-client
-  - sirius-os-ocs-url
+
   # simple-scan
   # syncthing
   # vlc
