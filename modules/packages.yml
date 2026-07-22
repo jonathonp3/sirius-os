@@ -5,6 +5,8 @@ install:
   # kid3
   # libreoffice
   
+  # UI
+  - gnome-tweaks
   # VALYRIAN theme
   - gtk-murrine-engine
   # https://extensions.gnome.org/extension/9558/gnome-wallpaper-engine/
