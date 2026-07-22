@@ -4,11 +4,12 @@ install:
   - gparted
   # kid3
   # libreoffice
- 
+  
+  # VALYRIAN theme
+  - gtk-murrine-engine
   # https://extensions.gnome.org/extension/9558/gnome-wallpaper-engine/
   - mpv
   
-  - ocs-url
   - pluma
   # rhythmbox
   - samba
