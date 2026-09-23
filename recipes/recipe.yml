@@ -1,0 +1,55 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+name: sirius-os
+description: My personal Bazzite-based OS image for the family.
+
+base-image: ghcr.io/ublue-os/bazzite-gnome
+image-version: latest
+
+modules:
+  # 1. THE CONSOLIDATED OVERLAY
+  # Everything in your 'files/' folder is mapped here
+  - type: files
+    files:
+      # --- Signing and verification ---
+      # The public key used to verify image signatures
+      - source: usr/etc/pki/containers/sirius-os.pub
+        destination: /usr/etc/pki/containers/sirius-os.pub
+      # Policy that requires sigstore signing for ghcr.io/jonathonp3/sirius-os
+      - source: usr/etc/containers/policy.json
+        destination: /usr/etc/containers/policy.json
+      # Tells containers tooling to use sigstore attachments for ghcr.io/jonathonp3
+      - source: usr/etc/containers/registries.d/sirius-os.yaml
+        destination: /usr/etc/containers/registries.d/sirius-os.yaml
+
+      # --- First-boot optimization ---
+      # Script that configures the Flatpak remote and installs the editor
+      - source: usr/libexec/sirius-os-firstboot.sh
+        destination: /usr/libexec/sirius-os-firstboot.sh
+      # Runs the first-boot script once, then writes a marker to skip future boots
+      - source: usr/lib/systemd/system/sirius-os-optimization.service
+        destination: /usr/lib/systemd/system/sirius-os-optimization.service
+
+      # --- tmpfiles setup ---
+      # Applies tmpfiles.d rules for PIA and other services before virtnetworkd starts
+      - source: usr/lib/systemd/system/app-tmpfiles.service
+        destination: /usr/lib/systemd/system/app-tmpfiles.service
+
+      # --- User and group setup ---
+      # Creates the docker group and adds users to the libvirt and docker groups
+      - source: usr/lib/sysusers.d/sirius-os.conf
+        destination: /usr/lib/sysusers.d/sirius-os.conf
+
+  # 2. Modular Repos and Packages
+  - from-file: ../modules/repository.yml
+  - from-file: ../modules/packages.yml
+  
+  # 3. Install backgrounds
+  - from-file: ../modules/backgrounds.yml      
+  
+  # 4: Custom Assembly (The Script)
+  - type: script
+    scripts:
+      - setup-sirius-os.sh
+
+

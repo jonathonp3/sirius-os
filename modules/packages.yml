@@ -1,0 +1,54 @@
+# yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
+type: rpm-ostree
+install:
+  - gparted
+  # kid3
+  # libreoffice
+  
+  # UI
+  - gnome-tweaks
+  # VALYRIAN theme
+  - gtk-murrine-engine
+  # https://extensions.gnome.org/extension/9558/gnome-wallpaper-engine/
+  - mpv
+  
+  # rhythmbox
+  - samba
+  - samba-client
+
+  # simple-scan
+  # syncthing
+  # vlc
+  - yt-dlp
+
+  # Image
+  - libwebp-tools
+  - libjxl-utils
+  
+  # Virtualisation stack
+  - sirius-os-virtualization
+  
+  ## Virt-Manager
+  # libvirt-daemon-kvm
+  # qemu-kvm
+  # virt-install
+  # virt-manager
+  # virt-viewer
+
+  ## Docker
+  - docker-ce
+  - docker-ce-cli
+  - containerd.io
+  - docker-buildx-plugin
+  - docker-compose-plugin
+  
+   ## PIA
+  - sirius-os-pia-installer
+  
+  # Winboat
+  # https://github.com/TibixDev/winboat/releases/latest/download/winboat-x86_64.rpm
+  # freerdp
+  # libwinpr
+  # libXScrnSaver
+  - sirius-os-winboat
+

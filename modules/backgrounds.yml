@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
+type: files
+files:
+  # Copy the entire folder of 21 wallpapers
+  - source: usr/share/backgrounds/sirius-os
+    destination: /usr/share/backgrounds/sirius-os
+
+  # Copy the XML so they appear in the GNOME Background picker
+  - source: usr/share/gnome-background-properties/sirius-os.xml
+    destination: /usr/share/gnome-background-properties/sirius-os.xml
+

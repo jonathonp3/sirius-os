@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<!DOCTYPE wallpapers SYSTEM "gnome-wallpapers.dtd">
+<wallpapers>
+  <!-- 1. DYNAMIC ENTRY (Files 1 & 2) -->
+  <wallpaper deleted="false">
+    <name>Sirius-OS Dynamic Geometrics</name>
+    <filename>/usr/share/backgrounds/sirius-os/geometrics-l.jxl</filename>
+    <filename-dark>/usr/share/backgrounds/sirius-os/geometrics-d.jxl</filename-dark>
+    <options>zoom</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#000000</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
+
+  <!-- 2. Abstract Orange Blue Pink Wavy Shapes -->
+  <wallpaper deleted="false">
+    <name>Sirius-OS Abstract Wavy Shapes</name>
+    <filename>/usr/share/backgrounds/sirius-os/abstract-orange-blue-pink-wavy-shapes-wallpaper-2560x1440.webp</filename>
+    <options>zoom</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#000000</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
+
+  <!-- 3. Blue Wallpaper -->
+  <wallpaper deleted="false">
+    <name>Sirius-OS Blue</name>
+    <filename>/usr/share/backgrounds/sirius-os/blue-wallpaper-2560x1440.webp</filename>
+    <options>zoom</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#000000</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
+
+  <!-- 4. Dark Geometric Shards -->
+  <wallpaper deleted="false">
+    <name>Sirius-OS Dark Geometric Shards</name>
+    <filename>/usr/share/backgrounds/sirius-os/Dark-Geometric-Shards-2560x1440-lossless.webp</filename>
+    <options>zoom</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#000000</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
+
+  <!-- 5. F25 Lossless -->
+  <wallpaper deleted="false">
+    <name>Sirius-OS F25 Lossless</name>
+    <filename>/usr/share/backgrounds/sirius-os/f25-lossless.webp</filename>
+    <options>zoom</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#000000</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
+
+  <!-- 6. F36 Day Lossless -->
+  <wallpaper deleted="false">
+    <name>Sirius-OS F36 Day Lossless</name>
+    <filename>/usr/share/backgrounds/sirius-os/f36-day-lossless.webp</filename>
+    <options>zoom</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#000000</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
+
+  <!-- 7. F41 Day Lossless -->
+  <wallpaper deleted="false">
+    <name>Sirius-OS F41 Day Lossless</name>
+    <filename>/usr/share/backgrounds/sirius-os/f41-day-lossless.webp</filename>
+    <options>zoom</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#000000</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
+
+  <!-- 8. Modern Abstract Circle with Purple Gradient -->
+  <wallpaper deleted="false">
+    <name>Sirius-OS Abstract Circle Purple Gradient</name>
+    <filename>/usr/share/backgrounds/sirius-os/modern-abstract-circle-with-purple-gradient-2560x1440-lossless.webp</filename>
+    <options>zoom</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#000000</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
+
+  <!-- 9. Smooth Dark Blue Gradient -->
+  <wallpaper deleted="false">
+    <name>Sirius-OS Smooth Dark Blue Gradient</name>
+    <filename>/usr/share/backgrounds/sirius-os/smooth-dark-blue-gradient-2560x1440-lossless.webp</filename>
+    <options>zoom</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#000000</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
+
+  <!-- 10. Sphere in Gradient Waves -->
+  <wallpaper deleted="false">
+    <name>Sirius-OS Sphere in Gradient Waves</name>
+    <filename>/usr/share/backgrounds/sirius-os/sphere-in-gradient-waves-2560x1440-lossless.webp</filename>
+    <options>zoom</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#000000</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
+</wallpapers>

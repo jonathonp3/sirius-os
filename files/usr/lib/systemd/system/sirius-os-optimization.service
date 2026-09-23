@@ -1,0 +1,16 @@
+[Unit]
+Description=Sirius-OS First Boot Optimization
+After=network-online.target
+Wants=network-online.target
+ConditionPathExists=!/etc/wolf-os/firstboot-done
+
+[Service]
+Type=oneshot
+ExecStart=/usr/libexec/sirius-os-firstboot.sh
+RemainAfterExit=yes
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
+
