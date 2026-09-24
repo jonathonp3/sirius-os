@@ -12,15 +12,21 @@ modules:
   - type: files
     files:
       # --- Signing and verification ---
-      # The public key used to verify image signatures
-      - source: usr/etc/pki/containers/sirius-os.pub
-        destination: /usr/etc/pki/containers/sirius-os.pub
-      # Policy that requires sigstore signing for ghcr.io/jonathonp3/sirius-os
+      # Signature policy: rejects unverified images, requires sigstore
+      # signature from the sirius-os key for ghcr.io/jonathonp3/sirius-os
       - source: usr/etc/containers/policy.json
         destination: /usr/etc/containers/policy.json
-      # Tells containers tooling to use sigstore attachments for ghcr.io/jonathonp3
+      # Cosign public key used to verify sirius-os image signatures
+      - source: usr/etc/pki/containers/sirius-os.pub
+        destination: /usr/etc/pki/containers/sirius-os.pub
+      # Enables sigstore attachment lookup for ghcr.io/jonathonp3 so
+      # containers tooling knows where to find the .sig tags in the registry
       - source: usr/etc/containers/registries.d/sirius-os.yaml
         destination: /usr/etc/containers/registries.d/sirius-os.yaml
+      # At boot: replace /etc/containers/policy.json and /etc/pki/containers/sirius-os.pub
+      # with the image versions above, so stale host copies can't shadow them
+      - source: usr/lib/tmpfiles.d/cosign-policy.conf
+        destination: /usr/lib/tmpfiles.d/cosign-policy.conf
 
       # --- First-boot optimization ---
       # Script that configures the Flatpak remote and installs the editor
@@ -29,11 +35,6 @@ modules:
       # Runs the first-boot script once, then writes a marker to skip future boots
       - source: usr/lib/systemd/system/sirius-os-optimization.service
         destination: /usr/lib/systemd/system/sirius-os-optimization.service
-
-      # --- tmpfiles setup ---
-      # Applies tmpfiles.d rules for PIA and other services before virtnetworkd starts
-      - source: usr/lib/systemd/system/app-tmpfiles.service
-        destination: /usr/lib/systemd/system/app-tmpfiles.service
 
       # --- User and group setup ---
       # Creates the docker group and adds users to the libvirt and docker groups
