@@ -36,7 +36,7 @@ install:
   - docker-compose-plugin
   
    ## PIA
-  * sirius-os-pia-installer
+  # sirius-os-pia-installer
   
   # Winboat
   # https://github.com/TibixDev/winboat/releases/latest/download/winboat-x86_64.rpm
