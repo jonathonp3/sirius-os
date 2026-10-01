@@ -9,7 +9,7 @@ groupadd -r docker || true
 
 # --- 2. AUTOMATED CLEANUP ---
 echo "⚙️ Setting up First-Boot Optimization service..."
-chmod +x /usr/libexec/sirius-os-firstboot.sh
+chmod +x /usr/libexec/sirius-os-optimization.sh
 
 # --- 3. FINALISE --- 
 # This command fails the build if any of these files are missing from recipe.yml
