@@ -49,4 +49,3 @@ install:
     # freerdp
     # libwinpr
     # libXScrnSaver
-    - sirius-os-winboat
